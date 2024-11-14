@@ -2,7 +2,7 @@ CartHub
 
 CartHub is a modern shopping dashboard designed for managing product listings on an e-commerce platform. Built with React, Material UI, and Bootstrap, it offers a clean, responsive UI to add, view, and manage product information easily.
 
-Features
+Features:-
 
 Add Products: Seamlessly add new products to the dashboard with fields for essential product details.
 
