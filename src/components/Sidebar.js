@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import ListSubheader from "@mui/material/ListSubheader";
 import List from "@mui/material/List";
 import ListItemButton from "@mui/material/ListItemButton";
@@ -27,8 +27,11 @@ const Sidebar = (props) => {
   const handleClick = () => {
     setOpen(!open);
   };
+
+
+
   return (
-    <div className="sidebar" style={sidebarDis?{width:'20%'}:{width:'0%'}}>
+    <div className={sidebarDis?"sidebar sidebarActive":"sidebar "}>
       <List
         sx={{ width: "100%", maxWidth: 360, bgcolor: "background.paper",paddingBottom:"80px" }}
         component="nav"
@@ -55,7 +58,7 @@ const Sidebar = (props) => {
             style={
               open
                 ? { transform: "rotate(180deg)", transition: "all 0.5s" }
-                : { transform: "rotate(90deg)", transition: "all 0.5s" }
+                : { transform: "rotate(90deg)",  transition: "all 0.5s" }
             }
           />
         </ListItemButton>

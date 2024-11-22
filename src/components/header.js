@@ -42,7 +42,7 @@ const Header = (props) => {
             </div>
 
             <div className="col-sm-3 d-flex align-items-center pl-4 part2">
-              <Button className="rounded-circle" onClick={()=>setSidebarDis(!sidebarDis)}>
+              <Button className="rounded-circle sideBarBtn" onClick={()=>setSidebarDis(!sidebarDis)}>
                 {sidebarDis? <MdMenuOpen />: <MdOutlineMenu />}
                
                
@@ -51,9 +51,9 @@ const Header = (props) => {
             </div>
 
             <div className="col-sm-7 d-flex align-items-center justify-content-end part3">
-              <Button className="rounded-circle mr-3">
+              {/* <Button className="rounded-circle mr-3">
                 <CiLight />
-              </Button>
+              </Button> */}
 
               {/* <Button className="rounded-circle mr-3">
            
@@ -131,6 +131,12 @@ const Header = (props) => {
 
               <Button className="rounded-circle mr-3" onClick={(e)=>setNotDrop(e.currentTarget)}>
                 <FaBell />
+              </Button>
+
+              <Button className="rounded-circle mobSideBarBtn" onClick={()=>setSidebarDis(!sidebarDis)}>
+                {sidebarDis? <MdMenuOpen />: <MdOutlineMenu />}
+               
+               
               </Button>
               <Menu
                 anchorEl={notDrop}

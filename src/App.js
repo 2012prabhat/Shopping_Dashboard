@@ -8,9 +8,15 @@ import Product from './pages/Product'
 import { useState } from 'react';
 import ProductComp from './pages/Dashboard/components/ProductComp';
 import AddProduct from './pages/Product/AddProduct';
+import { useEffect } from 'react';
 
 function App() {
   const [sidebarDis,setSidebarDis] = useState(true);
+  useEffect(()=>{
+      if(window.innerWidth<800){
+        setSidebarDis(false)
+      }
+  },[])
   return (
     <BrowserRouter>
     <Header state={[sidebarDis,setSidebarDis]}/>
@@ -19,7 +25,7 @@ function App() {
         <Sidebar state={[sidebarDis,setSidebarDis]} />
       </div>
 
-      <div className="content" style={sidebarDis?{width:'80%',flex:'0 0 80%'}:{width:'100%',flex:'0 0 100%'}}>
+      <div className="content" style={sidebarDis?{width:'80%',flex:'0 0 80%'}:{width:'100%',flex:'0 0 100%'}} onClick={()=>sidebarDis && setSidebarDis(false)}>
       <Routes>
         <Route path="/" exact={true} element={<Dashboard/>}/>
         <Route path="/dashboard" exact={true} element={<Dashboard/>}/>

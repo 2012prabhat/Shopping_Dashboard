@@ -100,7 +100,7 @@ const Product = () => {
           </div>
         </div>
         <br />
-        <div>
+        <div style={{padding:"0 2%"}}>
           <b>Product Description</b>
           <ul>
             <li>

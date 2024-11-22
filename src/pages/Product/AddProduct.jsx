@@ -5,6 +5,7 @@ import styles from './addProduct.module.css'; // Import the CSS module
 import Swal from 'sweetalert2';
 
 const AddProduct = () => {
+
   const formik = useFormik({
     initialValues: {
       uid: '',
@@ -45,7 +46,9 @@ const AddProduct = () => {
     },
   });
 
+
   return (
+    
     <form onSubmit={formik.handleSubmit} className={styles.form}>
         <h2 className={styles.h2}>Add Product</h2>
       <label htmlFor="uid" className={styles.label}>UID</label>
@@ -134,6 +137,7 @@ const AddProduct = () => {
 
       <button type="submit" className={styles.button}>Submit</button>
     </form>
+
   );
 };
 

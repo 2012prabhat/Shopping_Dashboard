@@ -136,7 +136,6 @@ header button.rounded-circle:hover svg{
 }
 
 .main .sidebarWrapper .sidebar{
-  width: 20%;
   height: 100vh;
   position: fixed;
   top: 70px;
@@ -144,6 +143,12 @@ header button.rounded-circle:hover svg{
   background: #fff;
   transition: all 0.25s;
   overflow: auto;
+  width: 0%;
+  z-index: 1;
+}
+
+.main .sidebarWrapper .sidebar.sidebarActive{
+  width: 20% !important;
 }
 
 .main .sidebarWrapper .sidebar::-webkit-scrollbar{
@@ -413,4 +418,64 @@ header button.rounded-circle:hover svg{
   margin-left: 15%;
 }
 
+.rounded-circle.mobSideBarBtn{
+  display: none;
+}
 
+@media screen and (max-width:800px) {
+    header .search{
+      display: none !important;
+    }
+
+    .userCont .ml-2{
+      display: none;
+    }
+
+    .part1{
+      width: fit-content !important;
+      margin-left: 2px !important;
+    }
+    .col-sm-3.d-flex.align-items-center.pl-4.part2{
+    display: none !important;
+    }
+    .part3{
+      width: fit-content !important;
+     
+    }
+
+    header .logo img {
+      height:35px !important;
+    }
+
+    .rounded-circle.mobSideBarBtn{
+      display: flex;
+      margin-right: 15px;
+    }
+    .main .sidebarWrapper .sidebar.sidebarActive{
+      width: 60% !important;
+    }
+
+    .dashboardBoxWrapper .dashboardBox {
+      width: 100%;
+    }
+
+    .dashboardBoxWrapperRow .box{
+      margin: 5% 0;
+    }
+
+    .productViewCont .proCont {
+      flex-direction: column;
+    }
+
+    .productViewCont .proCont .productImageCont{
+      width: 100%;
+    }
+
+    .productViewCont .proCont .productImageDetail{
+      width: 100%;
+    }
+    
+
+
+
+}
